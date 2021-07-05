@@ -1,20 +1,20 @@
-import Head from 'next/head';
-
-import NextLogo from '../assets/reactLogo.svg';
+import ReactLogo from '../assets/reactLogo.svg';
 import { Container } from '../styles/pages/Home';
+import { Typography, Head } from '../components';
+import { homeConstants } from '../constants/home';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <Head>
-        <title>Homepage</title>
-      </Head>
+      <Head title="Home page" />
 
-      <NextLogo height="10rem" width="10rem" />
+      <ReactLogo height="10rem" width="10rem" />
 
-      <h1>React JS Structure</h1>
+      <h1>{homeConstants.title}</h1>
 
-      <p>A React JS + Next.js structure made by Luciel Santos</p>
+      <Typography>
+        A React JS + Next.js structure made by Luciel Santos
+      </Typography>
     </Container>
   );
 };

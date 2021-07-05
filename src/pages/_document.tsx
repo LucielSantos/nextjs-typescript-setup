@@ -47,10 +47,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
           />
 
-          <link
-            rel="shortcut icon"
-            href="https://rocketseat.com.br/favicon.ico"
-          />
+          <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
 
         <body>
