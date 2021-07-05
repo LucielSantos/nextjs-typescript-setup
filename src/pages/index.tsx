@@ -1,20 +1,19 @@
+import { useCallback } from 'react';
+
 import ReactLogo from '../assets/reactLogo.svg';
+
 import { Container } from '../styles/pages/Home';
 import { Typography, Head } from '../components';
 import { homeConstants } from '../constants/home';
-import { useAppSelector } from '../hooks/store/useAppSelector';
 
-import * as HomeActions from '../store/modules/home/actions';
-import { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useHome } from '../hooks/pages/useHome';
 
 const Home: React.FC = () => {
-  const { count } = useAppSelector(state => state.home);
-  const dispatch = useDispatch();
+  const { count, addCount } = useHome();
 
   const onClickLogo = useCallback(() => {
-    dispatch(HomeActions.addList(count + 1));
-  }, [dispatch, count]);
+    addCount();
+  }, [addCount]);
 
   return (
     <Container>
