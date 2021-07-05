@@ -25,7 +25,11 @@ const Home: React.FC = () => {
         style={{ transform: `rotate(${20 * count}deg)`, cursor: 'pointer', userSelect: 'none' }}
         onClick={onClickLogo}
       />
-      <sub>Click on logo to rotate (the count is on Redux state)</sub>
+      <sub>
+        Click on logo to rotate
+        <br />
+        (the count is on Redux state, see on Redux DevTools)
+      </sub>
 
       <h1>{homeConstants.title}</h1>
 

@@ -20,4 +20,9 @@ export const Container = styled.div`
     font-size: 24px;
     line-height: 32px;
   }
+
+  sub {
+    text-align: center;
+    line-height: 20px;
+  }
 `;
