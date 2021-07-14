@@ -11,6 +11,10 @@ interface IGetKey<T> {
   (pageIndex: number, previousPageData: T): null | string;
 }
 
+/**
+ * Function to use in infinity list with SWR.
+ * @param swrConfig SWR Infinite config object.
+ */
 export function useInfinityFetch<TData = any, Error = any>(
   getKey: IGetKey<TData>,
   swrConfig?: SWRInfiniteConfiguration,
