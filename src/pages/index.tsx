@@ -2,11 +2,11 @@ import { useCallback } from 'react';
 
 import ReactLogo from '../assets/reactLogo.svg';
 
-import { Container } from '../styles/pages/Home';
-import { Typography, Head } from '../components';
-import { homeConstants } from '../constants/home';
+import { Container } from 'styles/pages/Home';
+import { Typography, Head } from 'components';
+import { homeConstants } from 'constants/home';
 
-import { useHome } from '../hooks/pages/useHome';
+import { useHome } from 'hooks/pages/useHome';
 
 const Home: React.FC = () => {
   const { count, addCount } = useHome();
