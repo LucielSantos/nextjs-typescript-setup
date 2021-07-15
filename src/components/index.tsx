@@ -1,2 +1,1 @@
-export * from './Typography';
-export * from './Head';
+export * from './Commons';

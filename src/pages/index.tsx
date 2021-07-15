@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import ReactLogo from '../assets/reactLogo.svg';
 
 import { Container } from 'styles/pages/Home';
-import { Typography, Head } from 'components';
+import { Typography, Head } from 'components/Commons';
 import { homeConstants } from 'constants/home';
 
 import { useHome } from 'hooks/pages/useHome';
