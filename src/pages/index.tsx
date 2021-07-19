@@ -33,7 +33,7 @@ const Home: React.FC = () => {
 
       <h1>{homeConstants.title}</h1>
 
-      <Typography>A React JS + Next.js structure made by Luciel Santos.</Typography>
+      <Typography>A React JS + Next.js structure made by Luciel Santos</Typography>
     </Container>
   );
 };
