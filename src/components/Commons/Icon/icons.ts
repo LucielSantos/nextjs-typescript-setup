@@ -4,8 +4,8 @@ import { IoIosClose as Close } from 'react-icons/io';
 import { IconType } from 'react-icons/lib';
 
 type TColor = keyof DefaultTheme['colors'];
-type TSizes = keyof DefaultTheme['icon']['sizes'];
-type TMargin = keyof DefaultTheme['spacings'];
+type TSizes = keyof DefaultTheme['icon']['sizes'] | string;
+type TMargin = keyof DefaultTheme['spacings'] | string;
 
 export interface IIcon {
   color?: TColor;
@@ -19,11 +19,14 @@ export interface IIcon {
 
 const addIconStyle = (Icon: IconType) => styled(Icon)<IIcon>`
   color: ${({ theme, color = 'one' }) => theme.colors[color]};
-  font-size: ${({ theme, iconSize = 'md' }) => theme.icon.sizes[iconSize]};
-  margin-top: ${({ theme, marginTop }) => (marginTop ? theme.spacings[marginTop] : 0)};
-  margin-right: ${({ theme, marginRight }) => (marginRight ? theme.spacings[marginRight] : 0)};
-  margin-bottom: ${({ theme, marginBottom }) => (marginBottom ? theme.spacings[marginBottom] : 0)};
-  margin-left: ${({ theme, marginLeft }) => (marginLeft ? theme.spacings[marginLeft] : 0)};
+  font-size: ${({ theme, iconSize = 'md' }) => theme.icon.sizes[iconSize] || iconSize};
+  margin-top: ${({ theme, marginTop }) => (marginTop ? theme.spacings[marginTop] || marginTop : 0)};
+  margin-right: ${({ theme, marginRight }) =>
+    marginRight ? theme.spacings[marginRight] || marginRight : 0};
+  margin-bottom: ${({ theme, marginBottom }) =>
+    marginBottom ? theme.spacings[marginBottom] || marginBottom : 0};
+  margin-left: ${({ theme, marginLeft }) =>
+    marginLeft ? theme.spacings[marginLeft] || marginLeft : 0};
 
   ${({ clickable }) =>
     clickable &&

@@ -6,11 +6,11 @@ const theme = {
   },
   icon: {
     sizes: {
-      xs: '2rem',
-      sm: '3rem',
-      md: '4rem',
-      lg: '5rem',
-      xl: '6rem',
+      xs: '1rem',
+      sm: '2rem',
+      md: '3rem',
+      lg: '4rem',
+      xl: '5rem',
     },
   },
   spacings: {
