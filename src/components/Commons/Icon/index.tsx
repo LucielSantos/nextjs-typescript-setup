@@ -6,6 +6,7 @@ type TIconName = keyof typeof icons;
 
 export interface IIconProps extends Omit<IIcon, 'iconSize'> {
   name: TIconName;
+  /** Se for um `number` será em rem */
   size?: IIcon['iconSize'];
   onClick?(event: any): void;
 }
