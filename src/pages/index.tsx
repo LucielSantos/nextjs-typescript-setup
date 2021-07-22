@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import ReactLogo from '../assets/reactLogo.svg';
 
 import { Container } from 'styles/pages/Home';
-import { Typography, Head } from 'components/Commons';
+import { Typography, Head, Icon } from 'components/Commons';
 import { homeConstants } from 'constants/home';
 
 import { useHome } from 'hooks/pages/useHome';
@@ -34,6 +34,8 @@ const Home: React.FC = () => {
       <h1>{homeConstants.title}</h1>
 
       <Typography>A React JS + Next.js structure made by Luciel Santos</Typography>
+
+      <Icon name="close" />
     </Container>
   );
 };
